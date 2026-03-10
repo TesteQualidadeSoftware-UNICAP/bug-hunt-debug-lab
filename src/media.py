@@ -7,7 +7,7 @@ def calcular_media(notas):
     # permitindo inspecionar variáveis no terminal
     breakpoint()
 
-    # Ao pausar, o aluno pode executar:
+    # Ao pausar, pode executar:
     # p total
     # p len(notas)
 
