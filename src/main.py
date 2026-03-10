@@ -1,7 +1,7 @@
 """
 MAIN DO LABORATÓRIO DE DEBUG
 
-Este arquivo funciona como ponto de entrada do sistema.
+Este arquivo é o ponto de entrada do sistema.
 
 Objetivo:
 Permitir que os alunos executem diferentes módulos do projeto
@@ -9,12 +9,13 @@ que contêm bugs intencionais para investigação.
 
 Durante a atividade os alunos devem:
 1. Executar o programa
-2. Escolher um módulo
-3. Observar o comportamento
+2. Escolher uma opção no menu
+3. Observar o comportamento do sistema
 4. Aplicar técnicas de debug
 5. Registrar o bug encontrado
 """
 
+# Importação dos módulos com bugs
 from desconto import calcular_desconto
 from media import calcular_media
 from login import login
@@ -25,6 +26,7 @@ from fantasma import processar_pedido
 
 
 def menu():
+    """Exibe o menu principal"""
 
     print("\n===== LABORATÓRIO DE DEBUG =====\n")
 
@@ -39,9 +41,9 @@ def menu():
 
 
 def executar_opcao(opcao):
+    """Executa a funcionalidade escolhida pelo usuário"""
 
-    # Técnica de Debug sugerida:
-    # observar o comportamento do sistema antes de investigar o código
+    # Cada opção executa um módulo diferente que contém bugs
 
     if opcao == "1":
 
@@ -50,7 +52,7 @@ def executar_opcao(opcao):
         preco = 100
         percentual = 10
 
-        # Técnica de debug: verificar valores de entrada
+        # Técnica de debug sugerida: observar valores de entrada
         print("[DEBUG] preco:", preco)
         print("[DEBUG] percentual:", percentual)
 
@@ -103,13 +105,14 @@ def executar_opcao(opcao):
 
         print("\n--- Teste Divisão ---")
 
-        # Técnica de debug: observar parâmetros antes da operação
+        # BUG proposital: divisão por zero
         a = 10
         b = 0
 
         print("[DEBUG] a:", a)
         print("[DEBUG] b:", b)
 
+        # Os alunos devem investigar o erro gerado aqui
         print(dividir(a, b))
 
     elif opcao == "6":
@@ -128,9 +131,8 @@ def executar_opcao(opcao):
 
         valor = 100
 
-        # Esse bug só aparece após algumas execuções
-        # Técnica de debug recomendada:
-        # executar várias vezes e observar o comportamento
+        # Este bug ocorre apenas após algumas execuções
+        # Técnica recomendada: executar várias vezes e observar o comportamento
 
         print("[DEBUG] valor inicial:", valor)
 
@@ -148,24 +150,22 @@ def executar_opcao(opcao):
 
 
 def main():
+    """Loop principal do programa"""
 
     opcao = ""
 
-    # Loop principal do programa
     while opcao != "0":
 
         menu()
 
         opcao = input("\nEscolha uma opção: ")
 
-        # Técnica de debug:
-        # pode-se colocar um breakpoint aqui para investigar o fluxo
+        # Técnica de debug opcional:
         # breakpoint()
 
         executar_opcao(opcao)
 
 
-# Ponto de entrada da aplicação
+# Ponto de entrada do programa
 if __name__ == "__main__":
-
     main()
