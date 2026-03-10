@@ -57,7 +57,7 @@ que devem ser encontrados e reportados.
 
 Este laboratório inclui diversos tipos de defeitos encontrados em
 sistemas reais:
-
+```
   Tipo de bug          Exemplo
   -------------------- --------------------------
   Erro lógico          cálculo de desconto
@@ -69,7 +69,7 @@ sistemas reais:
   Financeiro           erro de ponto flutuante
   Integração           erro em API
   Timezone             data/hora inconsistente
-
+```
 ------------------------------------------------------------------------
 
 # 🧪 Técnicas de Debug Utilizadas
@@ -149,14 +149,14 @@ Execute um dos arquivos:
 ------------------------------------------------------------------------
 
 # 🚦 Classificação de Severidade
-
+```
   Severidade   Descrição
   ------------ -----------------------------------
   Critical     Sistema inutilizável
   High         Funcionalidade principal afetada
   Medium       Funcionalidade secundária afetada
   Low          Problema menor ou cosmético
-
+```
 ------------------------------------------------------------------------
 
 # 🎮 Dinâmica da Atividade
@@ -172,7 +172,7 @@ Cada dupla deve:
 5.  Classificar a severidade do bug
 
 ------------------------------------------------------------------------
-
+```
 # 🏆 Pontuação da Atividade
 
   Ação                   Pontos
@@ -181,7 +181,7 @@ Cada dupla deve:
   Bug report completo    3
   Bug com evidência      2
   Sugestão de correção   3
-
+```
 ------------------------------------------------------------------------
 
 # 💡 Desafio Extra
